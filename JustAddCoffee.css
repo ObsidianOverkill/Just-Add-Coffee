@@ -1,0 +1,45 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: bisque;
+    border: solid;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: right; 
+       margin-left: 0.5em;
+       font-size: 1.3rem;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .hero{
+    display: flex;
+    border: solid;
+    
+  }
+
+  .hero-text{
+    max-width:60%;
+    text-align: center;
+    justify-content: center;
+  }
+
+img{
+
+border: solid;
+}
