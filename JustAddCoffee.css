@@ -1,56 +1,160 @@
-html{
+*{
     scroll-behavior: smooth;
-}
-
-body{
-    background-color: bisque;
-}
-
-ul {
-    list-style-type: none;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-position: fixed;
-right: 0;
-  }
-  
-  li {
-    float: right;
-       margin-right: 0.7em;
-       font-size: 1.3rem;
-  }
-  
-  li a {
-    display: block;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  a:visited{
-    color: black;
-  }
-
-  .hero{
-    display: flex;
-  }
-
-  .hero-text{
-    max-width:60%;
-    text-align: center;
-   margin-top:2.5rem;
-  }
-
-.hero-text button{
-    background-color: rgba(163, 40, 40, 0.753);
-    border: none;
-    padding:0.3rem;
-    border-radius: 0.5em;
-    font-size: 1em;
-    box-shadow:  2px 3px rgb(61, 14, 14);
+    padding:0;
+}
+html{
+  background-color: antiquewhite; 
+  box-sizing: border-box;
+}
+nav{
+  background-color:brown;
+  padding:0.3em;
+  position:fixed;
+  top:0;
+  width:100%;
+}
+ul{
+  list-style-type: none;
 }
 
-  .hero img{
-    width: 50%;
-  }
+.nav a{
+  text-decoration: none;
+  color:white;
+}
+.navbar{
+  display:flex;
+  justify-content:space-evenly;
+}
+
+/*hero-section*/
+
+.hero{
+  display:flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: antiquewhite;
+  min-height: 100vh;
+}
+
+.hero-text{
+  text-align: center;
+  padding:1em;
+  font-size: 1.3em;
+}
+
+.hero-text h1{
+  font-size: 2em;
+}
+
+.hero-text p{
+  font-size:0.8em;
+margin:top 0.3em;
+}
+
+.hero-btn{
+  margin-top: 0.5em;
+  margin-right: 0.2em;
+  border: none;
+  border-radius: 0.6em;
+  padding:10px;
+  background-color: rgb(255, 172, 37);
+}
+
+.hero-btn:hover{
+  transform: translateY(-0.1em);
+  box-shadow: 2px 2px rgb(216, 119, 0);
+}
+
+#hero-img {
+  width:100%;
+}
+
+.about{
+  display:flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blanchedalmond;
+  min-height: 100vh;
+}
+
+.aboutmetext{
+  text-align: center;
+  padding:1em;
+  font-size: 1.5em;
+}
+
+.about img{
+  width:50%;
+min-height: 100vh;
+}
+
+/*Menu*/
+.menu-main{
+text-align: center;
+font-size: 2em;
+margin:0.5em;
+}
+
+.menu-grid img{
+  width: 100%;
+}
+
+.menu-grid{
+  display: grid;
+  text-align: center;
+  grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+}
+
+.menu-container{
+  padding:0.5em;
+}
+
+.contact-section{
+  background-color: aqua;
+}
+
+.contact-section h1{
+  text-align: center;
+  font-size: 2.5em;
+  margin:0.5em;
+}
+
+.contact{
+  display: flex;
+}
+
+.contact-img{
+  width: 50%;
+}
+
+.contact img{
+  width: 100%;
+}
+
+.contact-msg{
+  width: 50%;
+}
+
+
+form input, textarea{
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+form{
+  border: solid;
+}
+
+form button{
+  border:none;
+  background-color: antiquewhite;
+  border-radius:20px;
+  width:50%;
+  justify-items: center;
+
+}
