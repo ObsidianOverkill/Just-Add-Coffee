@@ -1,160 +1,156 @@
 *{
-    scroll-behavior: smooth;
-    margin: 0;
-    padding:0;
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
 }
+
 html{
-  background-color: antiquewhite; 
+  background-color: var(--scone);
   box-sizing: border-box;
+  width: 100%;
 }
-nav{
-  background-color:brown;
-  padding:0.3em;
-  position:fixed;
-  top:0;
-  width:100%;
+
+body{
+  padding-top:60px;
 }
+
+:root{
+  --coffee-with-cream:rgb(194, 68, 0);
+  --dark-coffee:rgb(78, 20, 0);
+  --espresso:rgb(37, 2, 0);
+  --latte:rgb(253, 105, 71);
+  --scone:rgb(255, 176, 73);
+}
+
 ul{
   list-style-type: none;
+  background-color: var(--coffee-with-cream);
+  display: flex;
+  position: fixed;
+  top:0;
+  width: 100%; 
+  justify-content: space-evenly;
+  padding: 10px;
 }
 
-.nav a{
+ul a{
+  display:block;
   text-decoration: none;
-  color:white;
-}
-.navbar{
-  display:flex;
-  justify-content:space-evenly;
+  color:orange;
 }
 
-/*hero-section*/
+/*Hero section*/
 
 .hero{
-  display:flex;
-  justify-items: center;
-  align-items: center;
-  justify-content: space-between;
-  background-color: antiquewhite;
-  min-height: 100vh;
+  min-height:100vh;
+  display: flex; 
+  justify-content: center;
+  align-items:center;
 }
 
 .hero-text{
   text-align: center;
-  padding:1em;
-  font-size: 1.3em;
 }
 
-.hero-text h1{
-  font-size: 2em;
+#hero-btns{
+  padding:0.4em;
+  margin:0.2em;
+  border:none;
+  border-radius: 20px;
+  background-color: var(--latte);
+ 
 }
 
-.hero-text p{
-  font-size:0.8em;
-margin:top 0.3em;
+#hero-btns:hover{
+   box-shadow: 3px 3px var(--espresso);
+   transform: translateY(-2px);
 }
 
-.hero-btn{
-  margin-top: 0.5em;
-  margin-right: 0.2em;
-  border: none;
-  border-radius: 0.6em;
-  padding:10px;
-  background-color: rgb(255, 172, 37);
-}
+@media (max-width:848px) {
+  .hero{
+flex-direction: column-reverse;
+  }
 
-.hero-btn:hover{
-  transform: translateY(-0.1em);
-  box-shadow: 2px 2px rgb(216, 119, 0);
+  .about{
+    flex-direction: column-reverse;
+  }
 }
-
-#hero-img {
-  width:100%;
-}
+/*aboutme*/
 
 .about{
   display:flex;
-  justify-items: center;
+  height:100vh;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  background-color: blanchedalmond;
-  min-height: 100vh;
-}
-
-.aboutmetext{
-  text-align: center;
-  padding:1em;
-  font-size: 1.5em;
-}
-
-.about img{
-  width:50%;
-min-height: 100vh;
-}
-
-/*Menu*/
-.menu-main{
-text-align: center;
-font-size: 2em;
-margin:0.5em;
-}
-
-.menu-grid img{
-  width: 100%;
-}
-
-.menu-grid{
-  display: grid;
-  text-align: center;
-  grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
-}
-
-.menu-container{
-  padding:0.5em;
-}
-
-.contact-section{
-  background-color: aqua;
-}
-
-.contact-section h1{
-  text-align: center;
-  font-size: 2.5em;
-  margin:0.5em;
-}
-
-.contact{
-  display: flex;
-}
-
-.contact-img{
-  width: 50%;
-}
-
-.contact img{
-  width: 100%;
-}
-
-.contact-msg{
-  width: 50%;
-}
-
-
-form input, textarea{
-  width: 100%;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-}
-
-form{
   border: solid;
 }
 
-form button{
-  border:none;
-  background-color: antiquewhite;
-  border-radius:20px;
+.aboutme-text{
   width:50%;
-  justify-items: center;
+  text-align: center;
+  font-size: 1.4rem;
+}
 
+.aboutme-img{
+  width:50%;
+}
+
+.aboutme-img img{
+  width:100%;
+}
+
+/*menu*/
+
+.menu-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+justify-content: center;
+gap:20px;
+border: solid;
+}
+
+#menu-title{
+  text-align:center;
+  font-size: 3em;
+  padding: 40px;
+}
+
+.menu-item{
+  text-align: center;
+  justify-items: center;
+}
+
+.menu-item img{
+  width:100%;
+}
+
+/*contact*/
+
+.contact{
+  display:flex;
+  min-height:100vh;
+
+}
+
+.socials{
+  width: 50%;
+  flex-direction: column;
+}
+
+.message{
+  width:50%;
+  flex-direction: column;
+}
+
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
